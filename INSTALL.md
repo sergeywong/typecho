@@ -38,19 +38,19 @@ systemctl enable nginx
 ## 安装 MySQL
 安装对应的包
 ```shell
-yum install -y cmake ncurses-devel mysql
+yum install -y cmake ncurses-devel mysql mysql-server
 ```
 
 #启动 mysql 服务
-#```shell
-#systemctl start mysqld
-#```
-#
+```shell
+systemctl start mysqld
+```
+
 #设置开机启动
-#```shell
-#systemctl enable mysqld
-#systemctl daemon-reload
-#```
+```shell
+systemctl enable mysqld
+systemctl daemon-reload
+```
 
 ## 安装 php
 安装对应的包
