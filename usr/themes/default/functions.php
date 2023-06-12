@@ -3,6 +3,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form)
 {
+    $bei = new Typecho_Widget_Helper_Form_Element_Text('bei', NULL, NULL, _t('工信部备案号'), _t('留空则不显示'));
+    $form->addInput($bei->addRule('xssCheck', _t('工信部备案号不能使用特殊字符')));
     $logoUrl = new \Typecho\Widget\Helper\Form\Element\Text(
         'logoUrl',
         null,
